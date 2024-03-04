@@ -3,8 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Depends
 from typing import List
 from random import randrange
-from .routers import post,user,auth, vote
+# from .routers import post,user,auth, vote
+from .routers import post,user,auth,vote
+
 from .config import settings
+
 
 #builing the model
 import psycopg2
@@ -69,4 +72,3 @@ while True:
 # def test_posts(db:Session=Depends(get_db)):
 #     posts=db.query(models.Post).all()
 #     return posts
-
